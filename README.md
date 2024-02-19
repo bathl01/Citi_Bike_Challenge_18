@@ -30,3 +30,32 @@ Your task in this assignment is to aggregate the data found in the Citi Bike Tri
     * Ensure your presentation is professional, logical, and visually appealing.
     
 ## Data Source
+1. The initial stage of the project involved acquiring all the monthly CSV files, covering the period from January 2019 to December 2023, from the [Citi Bike Data](https://citibikenyc.com/system-data) webpage and organizing them in a designated folder named "data". The data used in this analysis specifically pertains to the Jersey City region.
+2. Subsequently, I established a Jupyter Notebook file, named "[citibike.ipynb](https://github.com/JeremyTallant/tableau-challenge/blob/main/citibike.ipynb)] to systematically clean and combine all the monthly CSV files into a single CSV file for 5 years an a file for 2023 only, in preparation for importing into Tableau for analysis of 5 year trends and past year usage.
+3. The following is a comprehensive overview of the data cleansing process:
+   * First import pandas.
+   * Read in all csv files for a single year in a pandas dataframe,
+      * store in a list,
+      * concatenate into a single dataframe
+      * create start date field
+      * group all rides from with the same satart location/end location adding a count for the day
+      * due to file format change in feb 2021 rename the columns to common names across years and select only needed columns for analysis
+         * StartDate', 
+         * 'start_station_id', 
+         * 'start_station_name', 
+         * 'start_lat',
+         * 'start_lng',	
+         * 'end_station_id',	
+         * 'end_station_name', 
+         * 'rideable_type'
+         * 'count'  
+   
+   * Repeat step for the remaining years.
+   * Combine all three dataframes into a single dataframe for 5 year analysis.
+   * Then save the dataframe to a csv file.
+   **Please note that the large size of the CSV files the 5 year file is zipped in git hub and the 2023 file is not included**
+## Dashboards
+From the Citi Bike data, a homepage and three corresponding dashboards were created to provide a comprehensive analysis and visualization of the data.
+### Homepage
+* The homepage serves as an introduction to the project, providing a concise overview of its purpose and contents. It clearly summarizes the key insights and findings of each dashboard, allowing for quick and easy navigation.
+<img width="1425" alt="Screenshot 2023-02-13 at 8 21 56 PM" src="https://user-images.githubusercontent.com/112406455/218622889-c2c2e218-99cc-4f3f-989b-e50da7169004.png">
